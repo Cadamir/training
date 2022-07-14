@@ -1,0 +1,13 @@
+.dates {
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.card-icon {
+    background-color: #202020;
+    border: white;
+    min-width: 4ex;
+    min-height: 4ex;
+}
