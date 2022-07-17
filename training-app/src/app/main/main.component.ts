@@ -13,15 +13,19 @@ export class MainComponent implements OnInit {
     new TrainingClass("15.07.2022", "18:00", "19:00", "Kickboxen", "Hansul Boxen", "Wettkampf")
   ];
 
-  constructor() { }
+  expand = new Map<string, boolean>();
+
+  constructor() { 
+    for(let training of this.trainings){
+      this.expand.set(training.id, false);
+    }
+  }
 
   ngOnInit(): void {
   }
 
-  onClick(id:String):void{
-    console.log("clickt")
-    console.log(id)
-    //$location.url("training?id=" + id);
+  changeExpand(id:string):void{
+      this.expand.set(id, !this.expand.get(id))
   }
 
 }

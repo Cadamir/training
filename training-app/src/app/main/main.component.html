@@ -8,12 +8,16 @@
             <tr><td>{{training.endTime}}</td></tr>
             <tr><td>{{training.theme}}</td></tr>
         </table>
+        <div *ngIf="this.expand.get(training.id)">
+            <mat-divider></mat-divider>
+            <app-training></app-training>
+            <mat-divider></mat-divider>
+        </div>
+
     </mat-card-content>
     <mat-card-actions>
-        <button mat-button class="card-icon" (click)="onClick(training.id)">
-            <a href="training?id={{training.id}}">
-                <img src="https://github.com/Cadamir/training/blob/main/training-app/src/assets/info.png?raw=true" width="20px">
-            </a>        
+        <button mat-button class="card-icon" (click)="changeExpand(training.id)">
+            <img src="https://github.com/Cadamir/training/blob/main/training-app/src/assets/info.png?raw=true" width="20px">
         </button>
         <button mat-button class="card-icon">
             <img src="https://github.com/Cadamir/training/blob/main/training-app/src/assets/add.png?raw=true" width="20px">

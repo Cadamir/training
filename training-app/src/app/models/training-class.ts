@@ -1,13 +1,13 @@
 export class TrainingClass {
-    date: String;
-    startTime: String;
-    endTime: String;
-    sport: String;
-    club: String;
-    theme: String;
-    id: String;
+    date: string;
+    startTime: string;
+    endTime: string;
+    sport: string;
+    club: string;
+    theme: string;
+    id: string;
 
-    constructor(date: String, startTime: String, endTime: String, sport: String, club: String, theme: String = "-"){
+    constructor(date: string, startTime: string, endTime: string, sport: string, club: string, theme: string = "-"){
         this.date = date;
         this.startTime = startTime;
         this.endTime = endTime;
