@@ -24,7 +24,7 @@ import {MatCardModule} from '@angular/material/card';
     MainComponent,
     CalendarComponent,
     TrainingComponent,
-    ImpressumComponent
+    ImpressumComponent,
   ],
   imports: [
     BrowserModule,

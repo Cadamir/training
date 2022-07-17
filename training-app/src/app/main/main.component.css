@@ -7,7 +7,8 @@
 
 .card-icon {
     background-color: #202020;
-    border: white;
+    border: white solid 1px;
     min-width: 4ex;
     min-height: 4ex;
+    margin: 1ex;
 }
