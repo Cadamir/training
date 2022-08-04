@@ -10,7 +10,7 @@
         </table>
         <div *ngIf="this.expand.get(training.id)">
             <mat-divider></mat-divider>
-            <app-training></app-training>
+            <app-training [athlets]="training.athlets"></app-training>
             <mat-divider></mat-divider>
         </div>
 
