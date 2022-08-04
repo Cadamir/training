@@ -1,5 +1,9 @@
+import { HttpClient, HttpHandler } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { waitForAsync } from '@angular/core/testing';
+import { withLatestFrom } from 'rxjs';
 import { TrainingClass } from '../models/training-class';
+import { TrainingService } from '../services/training/training.service';
 
 @Component({
   selector: 'app-main',
@@ -15,10 +19,12 @@ export class MainComponent implements OnInit {
 
   expand = new Map<string, boolean>();
 
-  constructor() { 
+  constructor(private trainingService: TrainingService) { 
     for(let training of this.trainings){
       this.expand.set(training.id, false);
     }
+    trainingService.getTrainings(10).subscribe(a => {this.trainings = a;});
+    console.debug(this.trainings);
   }
 
   ngOnInit(): void {

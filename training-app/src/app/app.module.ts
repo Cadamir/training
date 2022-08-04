@@ -11,6 +11,8 @@ import { ImpressumComponent } from './impressum/impressum.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { HttpClientModule } from '@angular/common/http';
+
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import {MatCardModule} from '@angular/material/card';
@@ -36,7 +38,8 @@ import {MatListModule} from '@angular/material/list';
     MatIconModule,
     MatCardModule,
     MatDividerModule,
-    MatListModule
+    MatListModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
