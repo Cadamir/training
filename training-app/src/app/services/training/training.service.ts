@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { TrainingClass } from 'src/app/models/training-class';
+import { TrainingClass } from 'src/app/models/training/training-class';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -12,6 +12,7 @@ export class TrainingService {
 
   public getTrainings(num:number):Observable<TrainingClass[]>{
     console.log("start request");
+
     let req = this.http.get<TrainingClass[]>("http://localhost:8080/training?number=20");
     return req;
   }

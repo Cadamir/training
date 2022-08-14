@@ -66,7 +66,7 @@ public class Training {
         );
         int azAthlet = random.nextInt(0,20);
         for(int i = 0; i < azAthlet; i++){
-            training.addAthlet(Athlet.random(), i);
+            training.addAthlet(Athlet.randomEasy(), i);
         }
         return training;
     }

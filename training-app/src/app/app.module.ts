@@ -8,6 +8,7 @@ import { MainComponent } from './main/main.component';
 import { CalendarComponent } from './calendar/calendar.component';
 import { TrainingComponent } from './training/training.component';
 import { ImpressumComponent } from './impressum/impressum.component';
+import { ProfileComponent } from './profile/profile.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -18,6 +19,8 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatCardModule} from '@angular/material/card';
 import {MatDividerModule} from '@angular/material/divider'; 
 import {MatListModule} from '@angular/material/list';
+import {MatGridListModule} from '@angular/material/grid-list'; 
+
 
 
 
@@ -29,6 +32,7 @@ import {MatListModule} from '@angular/material/list';
     CalendarComponent,
     TrainingComponent,
     ImpressumComponent,
+    ProfileComponent,
   ],
   imports: [
     BrowserModule,
@@ -39,7 +43,8 @@ import {MatListModule} from '@angular/material/list';
     MatCardModule,
     MatDividerModule,
     MatListModule,
-    HttpClientModule
+    HttpClientModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

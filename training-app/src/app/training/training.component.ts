@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { AthletClass } from '../models/athlet/athlet-class';
 
 @Component({
   selector: 'app-training',
@@ -8,7 +9,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class TrainingComponent implements OnInit {
 
   @Input()
-  athlets: string[] = [];
+  athlets: AthletClass[] = [];
 
   constructor() {
    }
