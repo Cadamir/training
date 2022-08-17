@@ -12,7 +12,7 @@
     [rowspan] = 2
     class="club"
     >
-        <strong>Verein</strong>
+        <strong>Vereine:</strong>
         <ul>
             <li *ngFor="let club of athlet.clubs" class="clubTable">{{club}}</li>
         </ul>
@@ -22,7 +22,7 @@
     [rowspan] = 2
     class="data"
     >
-    Daten:
+    <strong>Daten:</strong>
     <ul>
         <li>Alter: {{athlet.age}}</li>
         <li>Größe: {{showHeight()}} cm</li>
@@ -34,7 +34,7 @@
     [rowspan] = 2
     class="achiev"
     >
-    Erfolge:
+    <strong>Erfolge:</strong>
     <ul>
         <li *ngFor="let achievment of athlet.achievments">{{achievment}}</li>
     </ul>
