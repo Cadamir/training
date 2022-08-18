@@ -13,7 +13,7 @@ export class TrainingService {
   public getTrainings(num:number):Observable<TrainingClass[]>{
     console.log("start request");
 
-    let req = this.http.get<TrainingClass[]>("http://localhost:8080/training?number=20", {headers: new HttpHeaders({
+    let req = this.http.get<TrainingClass[]>("http://localhost:8080/training?number=" + num.toFixed(), {headers: new HttpHeaders({
       'Content-Type': 'application/json',
       'Accept': 'application/json',
       'Access-Control-Allow-Origin': 'http://localhost:8080'
