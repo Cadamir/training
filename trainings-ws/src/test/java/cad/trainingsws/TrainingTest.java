@@ -8,6 +8,20 @@ import static org.junit.jupiter.api.Assertions.*;
 class TrainingTest {
 
     @Test
+    @DisplayName("Should return a training with a random sport")
+    void randomShouldReturnTrainingWithRandomSport() {
+        Training training = Training.random();
+        assertNotNull(training.sport);
+    }
+
+    @Test
+    @DisplayName("Should return a training with a random club")
+    void randomShouldReturnTrainingWithRandomClub() {
+        Training training = Training.random();
+        assertNotNull(training.club);
+    }
+
+    @Test
     @DisplayName("Should add the athlet to the athlets list")
     void addAthletShouldAddTheAthletToTheAthletsList() {
         Training training =
@@ -41,19 +55,5 @@ class TrainingTest {
         Training training = Training.random();
         assertThrows(
                 IndexOutOfBoundsException.class, () -> training.getAthlet(training.athlets.size()));
-    }
-
-    @Test
-    @DisplayName("Should return a training with a random sport")
-    void randomShouldReturnTrainingWithRandomSport() {
-        Training training = Training.random();
-        assertNotNull(training.sport);
-    }
-
-    @Test
-    @DisplayName("Should return a training with a random club")
-    void randomShouldReturnTrainingWithRandomClub() {
-        Training training = Training.random();
-        assertNotNull(training.club);
     }
 }
