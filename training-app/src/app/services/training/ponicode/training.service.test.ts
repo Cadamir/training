@@ -56,4 +56,28 @@ describe("training_service.TrainingService.getTrainings", () => {
     test("1", () => {
         inst9.getTrainings(-5.48)
     })
+
+    test("2", () => {
+        inst21.getTrainings(100)
+    })
+
+    test("3", () => {
+        inst21.getTrainings(-100)
+    })
+
+    test("4", () => {
+        inst21.getTrainings(NaN)
+    })
+
+    test("5", () => {
+        inst21.getTrainings(-Infinity)
+    })
+
+    test("6", () => {
+        inst21.getTrainings(Infinity)
+    })
+
+    test("7", () => {
+        inst21.getTrainings(20)
+    })
 })
