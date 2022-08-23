@@ -78,4 +78,12 @@ public class Athlet {
                 descriptions[random.nextInt(0, descriptions.length)] //description
         );
     }
+
+    public boolean matchWeightClass(int minAge, int maxAge, int maxWeight){
+        if(this.weight > maxWeight) return false;
+        if(this.age > maxAge) return false;
+        if(this.age < minAge) return false;
+
+        return true;
+    }
 }
