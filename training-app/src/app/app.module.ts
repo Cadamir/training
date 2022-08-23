@@ -20,6 +20,7 @@ import {MatCardModule} from '@angular/material/card';
 import {MatDividerModule} from '@angular/material/divider'; 
 import {MatListModule} from '@angular/material/list';
 import {MatGridListModule} from '@angular/material/grid-list'; 
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 
 
@@ -44,7 +45,8 @@ import {MatGridListModule} from '@angular/material/grid-list';
     MatDividerModule,
     MatListModule,
     HttpClientModule,
-    MatGridListModule
+    MatGridListModule,
+    MatProgressSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

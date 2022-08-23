@@ -9,10 +9,15 @@ import { ProfileServiceService } from '../services/profile/profile-service.servi
 })
 export class ProfileComponent implements OnInit {
 
+  spinner:boolean = true;
+
   athlet:AthletClass = new AthletClass("Justin");
 
   constructor(private profileService:ProfileServiceService) { 
-    profileService.getAthlet().subscribe(a => {this.athlet = a;});
+    profileService.getAthlet().subscribe(a => {
+      this.athlet = a;
+      this.spinner = false;
+    });
     console.log(this.athlet);
   }
 

@@ -1,7 +1,7 @@
 export class AthletClass {
     name:string;
-    clubs:string[] | undefined;
-    achievements: string[] | undefined;
+    clubs:string[];
+    achievments: string[] = ["none"];
     age:number = 0;
     weight:number = 0;
     height:number = 0;
@@ -10,8 +10,8 @@ export class AthletClass {
 
     constructor(
         name:string,
-        clubs:string[] = [], 
-        achievements:string[] = [],
+        clubs:string[] = ["none"], 
+        achievements:string[] = ["none"],
         age:number = 0,
         weight:number = 0,
         height:number = 0,
@@ -19,7 +19,7 @@ export class AthletClass {
         ){
         this.name = name;
         this.clubs = clubs;
-        this.achievements = achievements;
+        this.achievments = achievements;
         this.age = age;
         this.weight = weight;
         this.height = height;

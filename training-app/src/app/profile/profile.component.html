@@ -1,15 +1,28 @@
-<mat-grid-list cols="4" rowHeight="2:1">
+<mat-spinner *ngIf="spinner==true" class="spinner"></mat-spinner>
+<mat-grid-list cols="4" rowHeight="3:1" *ngIf="spinner==false">
     <mat-grid-tile
     [colspan] = 4
     [rowspan] = 1
+    class="name"
     >
-        {{athlet.name}}
+        <strong>{{athlet.name}}</strong>
     </mat-grid-tile>
     <mat-grid-tile
-    [colspan] = 2
+    [colspan] = 1
     [rowspan] = 2
+    class="club"
     >
-    Daten:
+        <strong>Vereine:</strong>
+        <ul>
+            <li *ngFor="let club of athlet.clubs" class="clubTable">{{club}}</li>
+        </ul>
+    </mat-grid-tile>
+    <mat-grid-tile 
+    [colspan] = 1
+    [rowspan] = 2
+    class="data"
+    >
+    <strong>Daten:</strong>
     <ul>
         <li>Alter: {{athlet.age}}</li>
         <li>Größe: {{showHeight()}} cm</li>
@@ -19,15 +32,18 @@
     <mat-grid-tile
     [colspan] = 2
     [rowspan] = 2
+    class="achiev"
     >
-    Erfolge:
+    <strong>Erfolge:</strong>
     <ul>
-        <li *ngFor="let achievment of athlet.achievements">{{achievment}}</li>
+        <li *ngFor="let achievment of athlet.achievments">{{achievment}}</li>
     </ul>
     </mat-grid-tile>
     <mat-grid-tile
     [colspan] = 4
-    [rowspan] = 1>
+    [rowspan] = 1
+    class="descript"
+    >
     {{athlet.description}}
     </mat-grid-tile>
   </mat-grid-list>

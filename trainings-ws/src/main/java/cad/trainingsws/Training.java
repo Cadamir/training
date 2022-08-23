@@ -6,7 +6,7 @@ import java.util.Random;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class Training {
-    static AtomicInteger aID;
+    static AtomicInteger aID = new AtomicInteger();
     public int id;
     public String sport;
     public String club;
@@ -17,7 +17,6 @@ public class Training {
     public ArrayList<Athlet> athlets;
 
     public Training(String sport, String club, String date, String startTime, String endTime, String comment){
-        aID = new AtomicInteger();
         this.id = aID.addAndGet(1);
         this.sport = sport;
         this.club = club;

@@ -1,26 +1,29 @@
-<mat-card class="dates" *ngFor="let training of trainings">
-    <mat-card-title>{{training.sport}}</mat-card-title>
-    <mat-card-subtitle>{{training.club}}</mat-card-subtitle>
-    <mat-card-content>
-        <table class="date">
-            <tr><td>{{training.date}}</td></tr>
-            <tr><td>{{training.startTime}}</td></tr>
-            <tr><td>{{training.endTime}}</td></tr>
-            <tr><td>{{training.theme}}</td></tr>
-        </table>
-        <div *ngIf="this.expand.get(training.id)">
-            <mat-divider></mat-divider>
-            <app-training [athlets]="training.athlets"></app-training>
-            <mat-divider></mat-divider>
-        </div>
-
-    </mat-card-content>
-    <mat-card-actions>
-        <button mat-button class="card-icon" (click)="changeExpand(training.id)">
-            <img src="https://github.com/Cadamir/training/blob/main/training-app/src/assets/info.png?raw=true" width="20px">
-        </button>
-        <button mat-button class="card-icon">
-            <img src="https://github.com/Cadamir/training/blob/main/training-app/src/assets/add.png?raw=true" width="20px">
-        </button>
-      </mat-card-actions>
-</mat-card>
+<mat-spinner *ngIf="spinner==true" class="spinner"></mat-spinner>
+<div *ngIf="spinner==false">
+    <mat-card class="dates" *ngFor="let training of trainings">
+        <mat-card-title>{{training.sport}}</mat-card-title>
+        <mat-card-subtitle>{{training.club}}</mat-card-subtitle>
+        <mat-card-content>
+            <table class="date">
+                <tr><td>{{training.date}}</td></tr>
+                <tr><td>{{training.startTime}}</td></tr>
+                <tr><td>{{training.endTime}}</td></tr>
+                <tr><td>{{training.theme}}</td></tr>
+            </table>
+            <div *ngIf="this.expand.get(training.id)">
+                <mat-divider></mat-divider>
+                <app-training [athlets]="training.athlets"></app-training>
+                <mat-divider></mat-divider>
+            </div>
+    
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-button class="card-icon" (click)="changeExpand(training.id)">
+                <img src="https://github.com/Cadamir/training/blob/main/training-app/src/assets/info.png?raw=true" width="20px">
+            </button>
+            <button mat-button class="card-icon">
+                <img src="https://github.com/Cadamir/training/blob/main/training-app/src/assets/add.png?raw=true" width="20px">
+            </button>
+          </mat-card-actions>
+    </mat-card>    
+</div>
